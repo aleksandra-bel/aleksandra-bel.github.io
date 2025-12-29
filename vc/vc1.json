@@ -5,10 +5,10 @@
   "type": [
     "VerifiableCredential"
   ],
-  "issuer": "did:web:aleksandra-bel.github.io:did",
+  "issuer": "did:web:aleksandra-bel.github.io",
   "issuanceDate": "2025-01-01T00:00:00Z",
   "credentialSubject": {
-    "id": "did:web:aleksandra-bel.github.io:did",
+    "id": "did:web:aleksandra-bel.github.io",
     "type": "KubernetesCluster",
     "name": "cluster-a",
     "trustlistURI": "https://aleksandra-bel.github.io/trust/trust-list.json",
@@ -16,9 +16,9 @@
   },
   "proof": {
     "type": "JsonWebSignature2020",
-    "created": "2025-12-24T11:39:28.723Z",
+    "created": "2025-12-29T09:45:06.524Z",
     "proofPurpose": "assertionMethod",
-    "verificationMethod": "did:web:localhost%3A8081#key-1",
-    "jws": "eyJhbGciOiJFUzI1NiJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSJdLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIl0sImlzc3VlciI6ImRpZDp3ZWI6YWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvOmRpZCIsImlzc3VhbmNlRGF0ZSI6IjIwMjUtMDEtMDFUMDA6MDA6MDBaIiwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6d2ViOmFsZWtzYW5kcmEtYmVsLmdpdGh1Yi5pbzpkaWQiLCJ0eXBlIjoiS3ViZXJuZXRlc0NsdXN0ZXIiLCJuYW1lIjoiY2x1c3Rlci1hIiwidHJ1c3RsaXN0VVJJIjoiaHR0cHM6Ly9hbGVrc2FuZHJhLWJlbC5naXRodWIuaW8vdHJ1c3QvdHJ1c3QtbGlzdC5qc29uIiwiaGFzaCI6InNoYTI1Ni1kdW1teSJ9fQ.YBBAAKVWgkAc6CzHsYKe_N_ebPx7yQ2U2vaznTFA8uqoT-rcZpWKbdb5Vwg75ofoVugbVsoyG8Ie7uji3xN3mg"
+    "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
+    "jws": "eyJhbGciOiJFUzI1NiJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSJdLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIl0sImlzc3VlciI6ImRpZDp3ZWI6YWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvIiwiaXNzdWFuY2VEYXRlIjoiMjAyNS0wMS0wMVQwMDowMDowMFoiLCJjcmVkZW50aWFsU3ViamVjdCI6eyJpZCI6ImRpZDp3ZWI6YWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvIiwidHlwZSI6Ikt1YmVybmV0ZXNDbHVzdGVyIiwibmFtZSI6ImNsdXN0ZXItYSIsInRydXN0bGlzdFVSSSI6Imh0dHBzOi8vYWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvL3RydXN0L3RydXN0LWxpc3QuanNvbiIsImhhc2giOiJzaGEyNTYtZHVtbXkifX0.tGbmLw8sakzqKRyNzrOQcR5UCpgr21-pq1lXD5f3aG0l25Y-Vaq9MNFPTgdbkLX304pSVu800Pt3vX1SyyPGgw"
   }
 }

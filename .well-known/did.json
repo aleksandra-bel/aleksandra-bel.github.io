@@ -3,12 +3,12 @@
     "https://www.w3.org/ns/did/v1",
     "https://w3id.org/security/suites/jws-2020/v1"
   ],
-  "id": "did:web:aleksandra-bel.github.io:did",
+  "id": "did:web:aleksandra-bel.github.io",
   "verificationMethod": [
     {
-      "id": "did:web:aleksandra-bel.github.io:did#key-1",
+      "id": "did:web:aleksandra-bel.github.io#key-1",
       "type": "JsonWebKey2020",
-      "controller": "did:web:aleksandra-bel.github.io:did",
+      "controller": "did:web:aleksandra-bel.github.io",
       "publicKeyJwk": {
         "kty": "EC",
         "crv": "P-256",
@@ -18,6 +18,6 @@
     }
   ],
   "assertionMethod": [
-    "did:web:aleksandra-bel.github.io:did#key-1"
+    "did:web:aleksandra-bel.github.io#key-1"
   ]
 }

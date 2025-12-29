@@ -2,12 +2,12 @@
   "@context": ["https://www.w3.org/2018/credentials/v1"],
   "id": "urn:uuid:trust-list-1",
   "type": ["VerifiableCredential", "TrustListCredential"],
-  "issuer": "did:web:aleksandra-bel.github.io:did",
+  "issuer": "did:web:aleksandra-bel.github.io",
   "issuanceDate": "2025-01-01T00:00:00Z",
   "credentialSubject": {
-    "id": "did:web:aleksandra-bel.github.io:did",
+    "id": "did:web:aleksandra-bel.github.io",
     "trustList": [
-      "did:web:aleksandra-bel.github.io:did"
+      "did:web:aleksandra-bel.github.io"
     ]
   }
 }
