@@ -15,10 +15,10 @@
     "hash": "sha256-dummy"
   },
   "proof": {
-    "type": "JsonWebSignature2020",
-    "created": "2025-12-29T09:45:06.524Z",
+    "type": "Ed25519Signature2020",
+    "created": "2025-12-29T09:45:06Z",
     "proofPurpose": "assertionMethod",
     "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
-    "jws": "eyJhbGciOiJFUzI1NiJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSJdLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIl0sImlzc3VlciI6ImRpZDp3ZWI6YWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvIiwiaXNzdWFuY2VEYXRlIjoiMjAyNS0wMS0wMVQwMDowMDowMFoiLCJjcmVkZW50aWFsU3ViamVjdCI6eyJpZCI6ImRpZDp3ZWI6YWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvIiwidHlwZSI6Ikt1YmVybmV0ZXNDbHVzdGVyIiwibmFtZSI6ImNsdXN0ZXItYSIsInRydXN0bGlzdFVSSSI6Imh0dHBzOi8vYWxla3NhbmRyYS1iZWwuZ2l0aHViLmlvL3RydXN0L3RydXN0LWxpc3QuanNvbiIsImhhc2giOiJzaGEyNTYtZHVtbXkifX0.tGbmLw8sakzqKRyNzrOQcR5UCpgr21-pq1lXD5f3aG0l25Y-Vaq9MNFPTgdbkLX304pSVu800Pt3vX1SyyPGgw"
+    "proofValue": "zDummyBase58Signature"
   }
 }
