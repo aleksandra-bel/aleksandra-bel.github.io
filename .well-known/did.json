@@ -19,5 +19,12 @@
   ],
   "assertionMethod": [
     "did:web:aleksandra-bel.github.io#key-1"
+  ],
+  "service": [
+    {
+      "id": "did:web:aleksandra-bel.github.io#vc1",
+      "type": "TrustedContent",
+      "serviceEndpoint": "https://aleksandra-bel.github.io/vc/vc1.json"
+    }
   ]
 }
