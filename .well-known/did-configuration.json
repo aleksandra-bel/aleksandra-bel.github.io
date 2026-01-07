@@ -2,6 +2,7 @@
   "@context": "https://identity.foundation/.well-known/did-configuration/v1",
   "linked_dids": [
     {
+      "id": "urn:uuid:1f5b1f2c-9c1e-4f35-9c6b-000000000001",
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
         "https://identity.foundation/.well-known/did-configuration/v1",
@@ -12,16 +13,17 @@
       ],
       "issuer": "did:web:aleksandra-bel.github.io",
       "issuanceDate": "2025-01-01T00:00:00Z",
+      "expirationDate": "2030-01-01T00:00:00Z",
       "credentialSubject": {
         "id": "did:web:aleksandra-bel.github.io",
         "origin": "https://aleksandra-bel.github.io"
       },
       "proof": {
         "type": "Ed25519Signature2020",
-        "created": "2026-01-07T16:50:36Z",
+        "created": "2026-01-07T17:38:37Z",
         "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
         "proofPurpose": "assertionMethod",
-        "proofValue": "z4RHeu8qxTJNFwqArHTn2ytWg4wrmDrqChHhgvEmieoLyhgR57UC3ofas4hiwJsnd77kxY4swhzZrfdDpstqoUcrc"
+        "proofValue": "z3KSLWYsFAhKnCtvteUHGx4jxMgqT4nCQbZWKyTW5XhZZrKvmwXJ3waHFetntKYLGS5NdUZZAsk3QHpUGfek1nZV5"
       }
     }
   ]
