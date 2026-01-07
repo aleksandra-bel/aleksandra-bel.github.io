@@ -1,6 +1,17 @@
 {
   "@context": [
-    "https://www.w3.org/2018/credentials/v1"
+    "https://www.w3.org/2018/credentials/v1",
+    {
+      "name": "https://example.org/schema#name",
+      "type": "@type",
+      "trustlistURI": {
+        "@id": "https://example.org/schema#trustlistURI",
+        "@type": "@id"
+      },
+      "hash": "https://example.org/schema#hash",
+      "KubernetesCluster": "https://example.org/schema#KubernetesCluster"
+    },
+    "https://w3id.org/security/suites/ed25519-2020/v1"
   ],
   "type": [
     "VerifiableCredential"
@@ -16,9 +27,9 @@
   },
   "proof": {
     "type": "Ed25519Signature2020",
-    "created": "2025-12-29T09:45:06Z",
-    "proofPurpose": "assertionMethod",
+    "created": "2026-01-07T17:24:14Z",
     "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
-    "proofValue": "zDummyBase58Signature"
+    "proofPurpose": "assertionMethod",
+    "proofValue": "zUtxZ5LUEdbPqVUfCGx5Nt6ky9bEXQQh4pACjFDcqPBRfdHCa1eiwaoNMbJxZmJtRKSWKhacxmFM7tnAsiY192P1"
   }
 }
