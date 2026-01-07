@@ -2,8 +2,14 @@
   "@context": "https://identity.foundation/.well-known/did-configuration/v1",
   "linked_dids": [
     {
-      "@context": "https://www.w3.org/2018/credentials/v1",
-      "type": ["VerifiableCredential"],
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://identity.foundation/.well-known/did-configuration/v1",
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
       "issuer": "did:web:aleksandra-bel.github.io",
       "issuanceDate": "2025-01-01T00:00:00Z",
       "credentialSubject": {
@@ -11,11 +17,11 @@
         "origin": "https://aleksandra-bel.github.io"
       },
       "proof": {
-        "type": "JsonWebSignature2020",
-        "created": "2025-01-01T00:00:00Z",
-        "proofPurpose": "assertionMethod",
+        "type": "Ed25519Signature2020",
+        "created": "2026-01-07T16:50:36Z",
         "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
-        "jws": "eyJhbGciOiJFUzI1NiJ9.e30.signature"
+        "proofPurpose": "assertionMethod",
+        "proofValue": "z4RHeu8qxTJNFwqArHTn2ytWg4wrmDrqChHhgvEmieoLyhgR57UC3ofas4hiwJsnd77kxY4swhzZrfdDpstqoUcrc"
       }
     }
   ]

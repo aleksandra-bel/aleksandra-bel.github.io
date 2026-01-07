@@ -1,20 +1,12 @@
 {
-  "@context": [
-    "https://www.w3.org/ns/did/v1",
-    "https://w3id.org/security/suites/jws-2020/v1"
-  ],
+  "@context": "https://www.w3.org/ns/did/v1",
   "id": "did:web:aleksandra-bel.github.io",
   "verificationMethod": [
     {
       "id": "did:web:aleksandra-bel.github.io#key-1",
-      "type": "JsonWebKey2020",
+      "type": "Ed25519VerificationKey2020",
       "controller": "did:web:aleksandra-bel.github.io",
-      "publicKeyJwk": {
-        "kty": "EC",
-        "crv": "P-256",
-        "x": "GSA6c5aKPwTHgTjHbyOMrJKuoGpJb4NvdXtSNbOcSlc",
-        "y": "Bj4EF-L5tzcDj-Kxaji3T5uyvCey6hQIVuePoZzkWsY"
-      }
+      "publicKeyMultibase": "z6MkhvxhdihjHzCRNncMM67T8miwkaA6YCoj7GTHsdLkSRSz"
     }
   ],
   "assertionMethod": [
