@@ -1,0 +1,22 @@
+{
+  "@context": "https://identity.foundation/.well-known/did-configuration/v1",
+  "linked_dids": [
+    {
+      "@context": "https://www.w3.org/2018/credentials/v1",
+      "type": ["VerifiableCredential"],
+      "issuer": "did:web:aleksandra-bel.github.io",
+      "issuanceDate": "2025-01-01T00:00:00Z",
+      "credentialSubject": {
+        "id": "did:web:aleksandra-bel.github.io",
+        "origin": "https://aleksandra-bel.github.io"
+      },
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2025-01-01T00:00:00Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
+        "jws": "eyJhbGciOiJFUzI1NiJ9.e30.signature"
+      }
+    }
+  ]
+}
