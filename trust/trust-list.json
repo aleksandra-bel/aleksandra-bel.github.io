@@ -1,13 +1,19 @@
 {
-  "@context": ["https://www.w3.org/2018/credentials/v1"],
-  "id": "urn:uuid:trust-list-1",
-  "type": ["VerifiableCredential", "TrustListCredential"],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    {
+      "entries": "https://example.org/schema#entries"
+    }
+  ],
+  "type": ["VerifiableCredential"],
   "issuer": "did:web:aleksandra-bel.github.io",
   "issuanceDate": "2025-01-01T00:00:00Z",
   "credentialSubject": {
     "id": "did:web:aleksandra-bel.github.io",
-    "trustList": [
-      "did:web:aleksandra-bel.github.io"
+    "entries": [
+      {
+        "id": "did:web:aleksandra-bel.github.io"
+      }
     ]
   }
 }
