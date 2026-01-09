@@ -1,0 +1,12 @@
+{
+  "name": "tcr-signing",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@digitalbazaar/ed25519-signature-2020": "^5.2.0",
+    "@digitalbazaar/ed25519-verification-key-2020": "^4.2.0",
+    "bs58": "^6.0.0",
+    "jsonld": "^8.3.2",
+    "jsonld-signatures": "^11.3.0"
+  }
+}
