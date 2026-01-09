@@ -1,21 +1,76 @@
 {
-  "id": "urn:uuid:trust-list-1",
-  "issuer": "did:web:aleksandra-bel.github.io",
-  "issued": "2025-01-01T00:00:00Z",
-  "trustServiceProviderList": [
-    {
-      "id": "did:web:aleksandra-bel.github.io",
-      "name": "Aleksandra Test Provider",
-      "trustServiceList": [
+  "TrustServiceStatusList": {
+    "SchemeInformation": {
+      "TSLVersionIdentifier": 1,
+      "TSLSequenceNumber": 1,
+      "TSLType": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/TSL",
+      "SchemeTerritory": "EU",
+      "SchemeOperatorName": {
+        "Name": [
+          {
+            "lang": "en",
+            "value": "Aleksandra Bel"
+          }
+        ]
+      },
+      "SchemeName": {
+        "Name": [
+          {
+            "lang": "en",
+            "value": "Self-Issued Verifiable Credential Trust List"
+          }
+        ]
+      },
+      "ListIssueDateTime": "2026-01-08T12:00:00Z",
+      "NextUpdate": {
+        "dateTime": "2027-01-08T12:00:00Z"
+      }
+    },
+    "TrustServiceProviderList": {
+      "TrustServiceProvider": [
         {
-          "id": "service-1",
-          "serviceType": "TrustedContent",
-          "serviceEndpoint": "https://aleksandra-bel.github.io/vc/vc1.json",
-          "status": "ACTIVE"
+          "TSPInformation": {
+            "TSPName": {
+              "Name": [
+                {
+                  "lang": "en",
+                  "value": "Aleksandra Bel"
+                }
+              ]
+            },
+            "TSPTradeName": {
+              "Name": [
+                {
+                  "lang": "en",
+                  "value": "aleksandra-bel.github.io"
+                }
+              ]
+            }
+          },
+          "TSPServices": {
+            "TSPService": [
+              {
+                "ServiceInformation": {
+                  "ServiceTypeIdentifier": "http://uri.etsi.org/TrstSvc/Svctype/CA/PKC",
+                  "ServiceName": {
+                    "Name": [
+                      {
+                        "lang": "en",
+                        "value": "Verifiable Credential Issuing Authority"
+                      }
+                    ]
+                  },
+                  "ServiceStatus": "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
+                  "StatusStartingTime": "2026-01-01T00:00:00Z"
+                }
+              }
+            ]
+          }
         }
       ]
     }
-  ]
+  }
 }
+
 
 
