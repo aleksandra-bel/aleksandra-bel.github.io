@@ -19,14 +19,44 @@
           "UUID": "did:web:aleksandra-bel.github.io",
           "TSPName": "Aleksandra Bel",
           "TSPTradeName": "did:web:aleksandra-bel.github.io",
-          "TSPInformation": {},
+          "TSPInformation": {
+            "TSPInformationURI": "https://aleksandra-bel.github.io",
+            "TSPEntityIdentifierList": [
+              {
+                "Type": "DID",
+                "Value": "did:web:aleksandra-bel.github.io"
+              }
+            ],
+            "TSPCertificationList": {
+              "TSPCertification": [
+                {
+                  "Type": "SelfDeclaration",
+                  "Value": "https://aleksandra-bel.github.io/trust/trust-list.json"
+                }
+              ]
+            }
+          },
           "TSPServices": {
             "TSPService": [
               {
                 "ServiceName": "Verifiable Credential Issuer",
-                "ServiceTypeIdentifier": "did:web:aleksandra-bel.github.io",
+                "ServiceTypeIdentifier": "http://uri.etsi.org/TrstSvc/Svctype/CA/PKC",
                 "ServiceCurrentStatus": "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
-                "StatusStartingTime": "2026-01-01T00:00:00Z"
+                "StatusStartingTime": "2026-01-01T00:00:00Z",
+                "ServiceDefinitionURI": "https://www.w3.org/TR/vc-data-model/",
+                "ServiceDigitalIdentity": {
+                  "DigitalId": {
+                    "DID": "did:web:aleksandra-bel.github.io#key-1"
+                  }
+                },
+                "AdditionalServiceInformation": {
+                  "ServiceBusinessRulesURI": "https://aleksandra-bel.github.io/trust/rules",
+                  "ServiceGovernanceURI": "https://aleksandra-bel.github.io/trust/governance",
+                  "ServiceContractType": "SELF",
+                  "ServicePolicySet": "https://aleksandra-bel.github.io/trust/policy",
+                  "ServiceSchemaURI": "https://www.w3.org/2018/credentials/v1",
+                  "ServiceSupplyPoint": "https://aleksandra-bel.github.io/vc/"
+                }
               }
             ]
           }
