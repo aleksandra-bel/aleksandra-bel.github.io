@@ -21,12 +21,14 @@
           "TSPTradeName": "did:web:aleksandra-bel.github.io",
           "TSPInformation": {
             "TSPInformationURI": "https://aleksandra-bel.github.io",
-            "TSPEntityIdentifierList": [
-              {
-                "Type": "DID",
-                "Value": "did:web:aleksandra-bel.github.io"
-              }
-            ],
+            "TSPEntityIdentifierList": {
+              "TSPEntityIdentifier": [
+                {
+                  "Type": "DID",
+                  "Value": "did:web:aleksandra-bel.github.io"
+                }
+              ]
+            },
             "TSPCertificationList": {
               "TSPCertification": [
                 {
