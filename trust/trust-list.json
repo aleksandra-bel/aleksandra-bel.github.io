@@ -42,7 +42,7 @@
             "TSPService": [
               {
                 "ServiceName": "Verifiable Credential Issuer",
-                "ServiceTypeIdentifier": "http://uri.etsi.org/TrstSvc/Svctype/CA/PKC",
+                "ServiceTypeIdentifier": "did:web:aleksandra-bel.github.io",
                 "ServiceCurrentStatus": "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
                 "StatusStartingTime": "2026-01-01T00:00:00Z",
                 "ServiceDefinitionURI": "https://www.w3.org/TR/vc-data-model/",
