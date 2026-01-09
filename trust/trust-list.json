@@ -5,20 +5,10 @@
       "TSLSequenceNumber": 1,
       "TSLType": "LOCAL",
       "FrameworkOperatorName": {
-        "Name": [
-          {
-            "lang": "en",
-            "value": "Aleksandra Bel"
-          }
-        ]
+        "Name": "Aleksandra Bel"
       },
       "FrameworkName": {
-        "Name": [
-          {
-            "lang": "en",
-            "value": "Self-Issued VC Trust Framework"
-          }
-        ]
+        "Name": "Self-Issued VC Trust Framework"
       },
       "FrameworkScope": "SELF",
       "ListIssueDateTime": "2026-01-08T12:00:00Z"
