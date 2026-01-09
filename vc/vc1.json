@@ -19,7 +19,7 @@
   "issuer": "did:web:aleksandra-bel.github.io",
   "issuanceDate": "2025-01-01T00:00:00Z",
   "credentialSubject": {
-    "id": "did:web:aleksandra-bel.github.io",
+    "id": "did:web:cluster-a.github.io",
     "type": "KubernetesCluster",
     "name": "cluster-a",
     "trustlistURI": "https://aleksandra-bel.github.io/trust/trust-list.json",
@@ -27,9 +27,9 @@
   },
   "proof": {
     "type": "Ed25519Signature2020",
-    "created": "2026-01-09T11:00:39Z",
+    "created": "2026-01-09T11:11:10Z",
     "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
     "proofPurpose": "assertionMethod",
-    "proofValue": "z4GLACVbHbMzKAVhGZah1Kcm3vADG58sQTr9bxdPZ17wSZrqei4adCQCoXek5c9L2x9BUqDmvAJwrGyEV7Kh6Z8FQ"
+    "proofValue": "z3ZsRWvBv9eWoeG5f4VHmjLnHqJSyjfKfFDzijuUYPeiCsAC8D94zbSBBGNkuFCTVdFUxfgBGDevDddhy2sGZ34z7"
   }
 }
