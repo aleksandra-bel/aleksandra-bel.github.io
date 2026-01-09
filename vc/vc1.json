@@ -23,13 +23,13 @@
     "type": "KubernetesCluster",
     "name": "cluster-a",
     "trustlistURI": "https://aleksandra-bel.github.io/trust/trust-list.json",
-    "hash": "QmWg4YgKQSP8aUfey1CtaUxfh3Ms5QqaDm55PLYYv2dHHE"
+    "hash": "QmSHPGvLD8rD2iUpezfZzDa5qCcmejVxHJ5dVUf2xAFXqs"
   },
   "proof": {
     "type": "Ed25519Signature2020",
-    "created": "2026-01-09T09:35:03Z",
+    "created": "2026-01-09T09:52:20Z",
     "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
     "proofPurpose": "assertionMethod",
-    "proofValue": "z3neXe9y2ogaE7YKiSEgJp5LEhni1YPscRSxwQeCuvct6XUtzHgACw4L793iZwcpJnQJJNHVSmeu7nQH4u53L7xJJ"
+    "proofValue": "z41tfTEAfU6x8DeWuipVwwkC8fE9noGinxxAag1inoHXpg2qRLQyA4dwSxSMMrmrPPLC2ixJVvVCvo1AmA9DS6NWk"
   }
 }

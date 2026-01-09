@@ -1,12 +1,14 @@
 {
+  "id": "urn:uuid:trust-list-1",
   "issuer": "did:web:aleksandra-bel.github.io",
   "issued": "2025-01-01T00:00:00Z",
   "trustServiceProviderList": [
     {
       "id": "did:web:aleksandra-bel.github.io",
-      "name": "Aleksandra Test TSP",
+      "name": "Aleksandra Test Provider",
       "trustServiceList": [
         {
+          "id": "service-1",
           "serviceType": "TrustedContent",
           "serviceEndpoint": "https://aleksandra-bel.github.io/vc/vc1.json",
           "status": "ACTIVE"
@@ -15,4 +17,5 @@
     }
   ]
 }
+
 
