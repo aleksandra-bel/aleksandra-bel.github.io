@@ -1,11 +1,10 @@
 {
   "TrustServiceStatusList": {
-    "SchemeInformation": {
+    "FrameworkInformation": {
       "TSLVersionIdentifier": 1,
       "TSLSequenceNumber": 1,
-      "TSLType": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/TSL",
-      "SchemeTerritory": "EU",
-      "SchemeOperatorName": {
+      "TSLType": "LOCAL",
+      "FrameworkOperatorName": {
         "Name": [
           {
             "lang": "en",
@@ -13,56 +12,31 @@
           }
         ]
       },
-      "SchemeName": {
+      "FrameworkName": {
         "Name": [
           {
             "lang": "en",
-            "value": "Self-Issued Verifiable Credential Trust List"
+            "value": "Self-Issued VC Trust Framework"
           }
         ]
       },
-      "ListIssueDateTime": "2026-01-08T12:00:00Z",
-      "NextUpdate": {
-        "dateTime": "2027-01-08T12:00:00Z"
-      }
+      "FrameworkScope": "SELF",
+      "ListIssueDateTime": "2026-01-08T12:00:00Z"
     },
     "TrustServiceProviderList": {
       "TrustServiceProvider": [
         {
-          "TSPInformation": {
-            "TSPName": {
-              "Name": [
-                {
-                  "lang": "en",
-                  "value": "Aleksandra Bel"
-                }
-              ]
-            },
-            "TSPTradeName": {
-              "Name": [
-                {
-                  "lang": "en",
-                  "value": "aleksandra-bel.github.io"
-                }
-              ]
-            }
-          },
+          "UUID": "did:web:aleksandra-bel.github.io",
+          "TSPName": "Aleksandra Bel",
+          "TSPTradeName": "did:web:aleksandra-bel.github.io",
+          "TSPInformation": {},
           "TSPServices": {
             "TSPService": [
               {
-                "ServiceInformation": {
-                  "ServiceTypeIdentifier": "http://uri.etsi.org/TrstSvc/Svctype/CA/PKC",
-                  "ServiceName": {
-                    "Name": [
-                      {
-                        "lang": "en",
-                        "value": "Verifiable Credential Issuing Authority"
-                      }
-                    ]
-                  },
-                  "ServiceStatus": "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
-                  "StatusStartingTime": "2026-01-01T00:00:00Z"
-                }
+                "ServiceName": "Verifiable Credential Issuer",
+                "ServiceTypeIdentifier": "http://uri.etsi.org/TrstSvc/Svctype/CA/PKC",
+                "ServiceCurrentStatus": "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
+                "StatusStartingTime": "2026-01-01T00:00:00Z"
               }
             ]
           }
@@ -71,6 +45,3 @@
     }
   }
 }
-
-
-
