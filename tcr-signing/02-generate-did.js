@@ -30,6 +30,6 @@ const did = {
     ]
 };
 
-fs.mkdirSync("out", { recursive: true });
-fs.writeFileSync("out/did.json", JSON.stringify(did, null, 2));
-console.log("✅ out/did.json generated");
+fs.mkdirSync("out/.well-known", { recursive: true });
+fs.writeFileSync("out/.well-known/did.json", JSON.stringify(did, null, 2));
+console.log("✅ out/.well-known/did.json generated");

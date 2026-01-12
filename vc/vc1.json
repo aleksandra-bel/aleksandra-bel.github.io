@@ -27,9 +27,9 @@
   },
   "proof": {
     "type": "Ed25519Signature2020",
-    "created": "2026-01-12T12:56:48Z",
+    "created": "2026-01-12T14:20:08Z",
     "verificationMethod": "did:web:aleksandra-bel.github.io#key-1",
     "proofPurpose": "assertionMethod",
-    "proofValue": "z4v8DvWizHVCTWpLi8DGPSWzjhVDQtxg7MpQhGyZS2mgYj8LmWUkLfPq6qEASBfxWSQXNp42P64jHXqhbw9YbAnHr"
+    "proofValue": "z56gLd2dv9Pvyymp1SomHQVgXRHfYQ5DDsNW7hFqip1gusqaN4agHXapTPe5skmPaM8f83A7xsUwSxG2gtAz4ttUv"
   }
 }

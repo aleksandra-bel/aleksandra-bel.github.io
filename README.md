@@ -27,7 +27,8 @@ Make sure to follow **exactly the same folder structure** as shown below:
 ├── trust/
 │   └── trust-list.json
 ├── vc/
-│   └── vc1.json
+    └── vc1.json
+    └── vc2.json
 ```
 
 Here did-configuration and did belong to the **Issuer**, vc1 to the **Holder** and trust-list to the **Issuer**/**Trust Service provider**.
@@ -40,11 +41,13 @@ Here did-configuration and did belong to the **Issuer**, vc1 to the **Holder** a
 
 ## ⚙️ Generating the Example Files
 
-You can generate valid example files by running the scripts in the `/tcr-signing` folder **in numeric order**.
+You can generate valid example files by running the script **generate-all** in the `/tcr-signing` folder.
 
-- Scripts must be executed sequentially
 - Output files will be written to the `/out` folder
 - Copy the generated files into the correct folders shown above
+
+For you convenience there are numerated scripts for each step in the same folder.
+If you use them, in order to generate a failure example, execute **01-generate-keys.js** to get another key and then use it in **05-hash-and-generate-vc.js** to get a VC with a correct structure, but wrong signature. 
 
 ---
 
@@ -113,9 +116,15 @@ When working with Verifiable Credentials:
 
 ---
 
-## ✅ Validation Example
+## ✅ Validation Examples
 
-### Request
+### Successful scenario
+
+I have an issued a valid VC
+I send a valid vc to TRAIN
+AND train responds with "OK" (VC verified: true)
+
+#### Request VC
 
 ```bash
 curl --location 'http://localhost:8083/tcr/v1/validate' \
@@ -132,7 +141,9 @@ curl --location 'http://localhost:8083/tcr/v1/validate' \
 
 ---
 
-### Successful Response
+#### Successful Response
+
+Did is verified and VC is also verified, as vc1 is signed with the key corresponding to issuer did. 
 
 ```json
 {
@@ -188,6 +199,92 @@ curl --location 'http://localhost:8083/tcr/v1/validate' \
         }
       },
       "vcVerified": true
+    }
+  ]
+}
+```
+
+### Failure scenario
+
+I have an issued not valid VC
+I send a not valid vc to TRAIN
+And it responds as "not OK" (VC verified: false)
+
+#### Request VC
+
+```bash
+curl --location 'http://localhost:8083/tcr/v1/validate' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--data '{
+  "issuer": "did:web:aleksandra-bel.github.io",
+  "did": "did:web:aleksandra-bel.github.io",
+  "endpoints": [
+    "https://aleksandra-bel.github.io/vc/vc2.json"
+  ]
+}'
+```
+
+---
+
+#### Response
+
+Did is verified, but VC is not verified, as vc2 is signed with the randomly generated key, not corresponding to issuer did.
+
+```json
+{
+  "didVerified": true,
+  "endpoints": [
+    {
+      "vcUri": "https://aleksandra-bel.github.io/vc/vc1.json",
+      "tlUri": "https://aleksandra-bel.github.io/trust/trust-list.json",
+      "trustList": {
+        "UUID": "did:web:aleksandra-bel.github.io",
+        "TSPName": "Aleksandra Bel",
+        "TSPTradeName": "did:web:aleksandra-bel.github.io",
+        "TSPInformation": {
+          "Address": null,
+          "TSPCertificationList": {
+            "TSPCertification": [
+              {
+                "Type": "SelfDeclaration",
+                "Value": "https://aleksandra-bel.github.io/trust/trust-list.json"
+              }
+            ]
+          },
+          "TSPEntityIdentifierList": {
+            "TSPEntityIdendifier": null
+          },
+          "TSPInformationURI": "https://aleksandra-bel.github.io"
+        },
+        "TSPServices": {
+          "TSPService": [
+            {
+              "ServiceName": "Verifiable Credential Issuer",
+              "ServiceTypeIdentifier": "did:web:aleksandra-bel.github.io",
+              "ServiceCurrentStatus": "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
+              "StatusStartingTime": "2026-01-01T00:00:00Z",
+              "ServiceDefinitionURI": "https://www.w3.org/TR/vc-data-model/",
+              "ServiceDigitalIdentity": {
+                "DigitalId": {
+                  "X509Certificate": null,
+                  "DID": "did:web:aleksandra-bel.github.io#key-1"
+                }
+              },
+              "AdditionalServiceInformation": {
+                "ServiceBusinessRulesURI": "https://aleksandra-bel.github.io/trust/rules",
+                "ServiceGovernanceURI": "https://aleksandra-bel.github.io/trust/governance",
+                "ServiceIssuedCredentialTypes": null,
+                "ServiceContractType": "SELF",
+                "ServicePolicySet": "https://aleksandra-bel.github.io/trust/policy",
+                "ServiceSchemaURI": "https://www.w3.org/2018/credentials/v1",
+                "ServiceSupplyPoint": "https://aleksandra-bel.github.io/vc/"
+              }
+            }
+          ]
+        }
+      },
+      "vcVerified": false
     }
   ]
 }

@@ -19,7 +19,7 @@ const TRUST_LIST_PATH = "../trust/trust-list.json";
 const VC_TEMPLATE_PATH = "../vc/vc1.json";      // unsigned template
 const PRIVATE_KEY_PATH = "./out/ed25519-private.json";
 
-const VC_OUTPUT_PATH = "./out/vc1.json";
+const VC_OUTPUT_PATH = "./out/vc/vc1.json";
 const CREATED = "2026-01-09T12:37:57Z";
 
 const documentLoader = jsonld.documentLoaders.node();
@@ -79,7 +79,7 @@ async function main() {
     });
 
     /* 8️⃣ Write output */
-    fs.mkdirSync("./out", { recursive: true });
+    fs.mkdirSync("./out/vc", { recursive: true });
     fs.writeFileSync(VC_OUTPUT_PATH, JSON.stringify(signedVc, null, 2));
 
     console.log("✅ VC generated and signed");

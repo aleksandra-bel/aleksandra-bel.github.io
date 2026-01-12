@@ -63,6 +63,6 @@ const trustList = {
     }
 };
 
-fs.mkdirSync("out", { recursive: true });
-fs.writeFileSync("out/trust-list.json", JSON.stringify(trustList, null, 2));
-console.log("✅ out/trust-list.json generated");
+fs.mkdirSync("out/trust", { recursive: true });
+fs.writeFileSync("out/trust/trust-list.json", JSON.stringify(trustList, null, 2));
+console.log("✅ out/trust/trust-list.json generated");

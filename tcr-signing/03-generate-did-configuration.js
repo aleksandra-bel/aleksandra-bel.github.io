@@ -45,7 +45,7 @@ const documentLoader = jsonld.documentLoaders.node();
         linked_dids: [signed]
     };
 
-    fs.mkdirSync("out", { recursive: true });
-    fs.writeFileSync("out/did-configuration.json", JSON.stringify(didConfiguration, null, 2));
-    console.log("✅ out/did-configuration.json generated");
+    fs.mkdirSync("out/.well-known", { recursive: true });
+    fs.writeFileSync("out/.well-known/did-configuration.json", JSON.stringify(didConfiguration, null, 2));
+    console.log("✅ out/.well-known/did-configuration.json generated");
 })();
