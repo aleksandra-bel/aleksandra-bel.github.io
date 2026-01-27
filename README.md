@@ -10,6 +10,7 @@ The following example files are included:
 - `did-configuration.json`
 - `trust-list.json`
 - `vc1.json`
+- `vc2.json`
 
 These files are generated using scripts located in the `/tcr-signing` folder and are validated using the TRAIN service.
 
@@ -31,7 +32,8 @@ Make sure to follow **exactly the same folder structure** as shown below:
     └── vc2.json
 ```
 
-Here did-configuration and did belong to the **Issuer**, vc1 to the **Holder** and trust-list to the **Issuer**/**Trust Service provider**.
+Here did-configuration and did belong to the **Issuer**, vc1 and vc2 to the **Holder** and trust-list to the **Issuer**/**Trust Service provider**.
+In vc1 the signature is correct and it will pass the TRAIN verification, in vc2 the signature is not correct, so it is used for the failure scenario. 
 
 > ⚠️ **Important**  
 > TRAIN relies on both file content **and** folder structure, as some of the paths are hard-coded in it.   
