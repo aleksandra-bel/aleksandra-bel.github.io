@@ -10,7 +10,7 @@ function base64url(bytes) {
         .replace(/\//g, "_");
 }
 
-const DID = "did:web:aleksandra-bel.github.io";
+const DID = "did:web:vc-holder.ssi-b.platform.mg3.mdb.osc.live";
 const KEY_ID = `${DID}#key-1`;
 
 (async () => {

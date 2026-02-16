@@ -228,7 +228,8 @@ function sha256Multihash(bytes) {
                 ]
             }
         }
-    };
+    }
+    //add space in the file for nginx;
 
     const trustListPath = `${TRUST_DIR}/trust-list.json`;
     fs.writeFileSync(trustListPath, JSON.stringify(trustList, null, 2));

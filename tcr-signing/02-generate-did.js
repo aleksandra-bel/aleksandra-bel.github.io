@@ -1,7 +1,7 @@
 import fs from "fs";
 
-const DID = "did:web:aleksandra-bel.github.io";
-const ORIGIN = "https://aleksandra-bel.github.io";
+const DID = "did:web:vc-holder.ssi-b.platform.mg3.mdb.osc.live";
+const ORIGIN = "https://vc-holder.ssi-b.platform.mg3.mdb.osc.live";
 const KEY_ID = `${DID}#key-1`;
 
 const publicJwk = JSON.parse(fs.readFileSync("out/public-jwk.json", "utf8"));
@@ -23,9 +23,9 @@ const did = {
     assertionMethod: [KEY_ID],
     service: [
         {
-            id: `${DID}#vc1`,
+            id: `${DID}#vc`,
             type: "TrustedContent",
-            serviceEndpoint: `${ORIGIN}/vc/vc1.json`
+            serviceEndpoint: `${ORIGIN}/vc/vc-self.json`
         }
     ]
 };

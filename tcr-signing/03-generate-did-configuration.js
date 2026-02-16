@@ -6,8 +6,8 @@ import { Ed25519Signature2020 } from "@digitalbazaar/ed25519-signature-2020";
 
 const { sign, purposes } = jsigs;
 
-const DID = "did:web:aleksandra-bel.github.io";
-const ORIGIN = "https://aleksandra-bel.github.io";
+const DID = "did:web:vc-holder.ssi-b.platform.mg3.mdb.osc.live";
+const ORIGIN = "https://vc-holder.ssi-b.platform.mg3.mdb.osc.live";
 const CREATED = "2026-01-08T10:15:27Z"; // you can change
 
 const keyData = JSON.parse(fs.readFileSync("out/ed25519-private.json", "utf8"));
