@@ -28,10 +28,10 @@ const HOLDER_B_ORIGIN = `https://${HOLDER_B_HOST}`;
 
 // Key id in issuer DID doc
 const KEY_ID = `${SUBJECT_DID_B}#key-1`;
-const TRUST_LIST_PATH = "./out/trust/trust-list.json";
+const TRUST_LIST_PATH = "./out-b/trust/trust-list.json";
 const PRIVATE_KEY_PATH = "./out/ed25519-private.json";
 
-const OUT = "./out";
+const OUT = "./out-b";
 const WELL_KNOWN = `${OUT}/.well-known`;
 const TRUST_DIR = `${OUT}/trust`;
 const VC_DIR = `${OUT}/vc`;
@@ -95,14 +95,10 @@ async function main() {
         "@context": [
             "https://www.w3.org/2018/credentials/v1",
             {
-                name: "https://example.org/schema#name",
-                type: "@type",
-                trustlistURI: {
-                    "@id": "https://example.org/schema#trustlistURI",
+                "@vocab": "https://example.org/schema#",
+                "trustlistURI": {
                     "@type": "@id"
-                },
-                hash: "https://example.org/schema#hash",
-                KubernetesCluster: "https://example.org/schema#KubernetesCluster"
+                }
             },
             "https://w3id.org/security/suites/ed25519-2020/v1"
         ],
@@ -111,10 +107,39 @@ async function main() {
         issuanceDate: "2025-01-01T00:00:00Z",
         credentialSubject: {
             id: SUBJECT_DID_B,
-            type: "KubernetesCluster",
+            type: "EdgeCloudZone",
             name: "ssi-b",
+            camaraZoneId: "a7d1b5c4-2e98-47f3-8a6d-5c1e9f2b3d76",
+            camaraZoneName: "dt-mec-ham-01",
+            provider: "Deutsche Telekom",
+            serviceTypes: ["EdgeApplicationAPI", "FederationGateway"],
             trustlistURI: `${HOLDER_B_ORIGIN}/trust/trust-list.json`,
-            hash: trustHash
+            hash: trustHash,
+            services: [
+                {
+                    "type": "payments",
+                    "url": "/finance/payments",
+                    "protocol": "HTTPS",
+                    "port": 443
+                }
+            ],
+            policies: [
+                {
+                    "description": "Policy for payments service",
+                    "name": "authz/number",
+                    "service": "payments",
+                    "constraints": {
+                        "number": {
+                            "type": "integer",
+                            "maximum": 50
+                        }
+                    }
+                }
+            ],
+            location: {
+                "latitude": 59.11,
+                "longitude": 7.68
+            }
         }
     };
 

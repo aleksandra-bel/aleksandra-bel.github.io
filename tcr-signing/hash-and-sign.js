@@ -4,10 +4,10 @@ import bs58 from "bs58";
 import jsonld from "jsonld";
 import jsigs from "jsonld-signatures";
 
-import { Ed25519VerificationKey2020 } from "@digitalbazaar/ed25519-verification-key-2020";
-import { Ed25519Signature2020 } from "@digitalbazaar/ed25519-signature-2020";
+import {Ed25519VerificationKey2020} from "@digitalbazaar/ed25519-verification-key-2020";
+import {Ed25519Signature2020} from "@digitalbazaar/ed25519-signature-2020";
 
-const { sign, purposes } = jsigs;
+const {sign, purposes} = jsigs;
 
 const documentLoader = jsonld.documentLoaders.node();
 
@@ -28,10 +28,10 @@ const HOLDER_B_ORIGIN = `https://${HOLDER_B_HOST}`;
 
 // Key id in issuer DID doc
 const KEY_ID = `${ISSUER_DID}#key-1`;
-const TRUST_LIST_PATH = "./out/trust/trust-list.json";
-const PRIVATE_KEY_PATH = "./out/ed25519-private.json";
+const TRUST_LIST_PATH = "./out-a/trust/trust-list.json";
+const PRIVATE_KEY_PATH = "./out-a/ed25519-private.json";
 
-const OUT = "./out";
+const OUT = "./out-a";
 const WELL_KNOWN = `${OUT}/.well-known`;
 const TRUST_DIR = `${OUT}/trust`;
 const VC_DIR = `${OUT}/vc`;
@@ -45,14 +45,10 @@ async function main() {
         "@context": [
             "https://www.w3.org/2018/credentials/v1",
             {
-                name: "https://example.org/schema#name",
-                type: "@type",
-                trustlistURI: {
-                    "@id": "https://example.org/schema#trustlistURI",
+                "@vocab": "https://example.org/schema#",
+                "trustlistURI": {
                     "@type": "@id"
-                },
-                hash: "https://example.org/schema#hash",
-                KubernetesCluster: "https://example.org/schema#KubernetesCluster"
+                }
             },
             "https://w3id.org/security/suites/ed25519-2020/v1"
         ],
@@ -61,10 +57,39 @@ async function main() {
         issuanceDate: "2025-01-01T00:00:00Z",
         credentialSubject: {
             id: SUBJECT_DID_A,
-            type: "KubernetesCluster",
+            type: "EdgeCloudZone",
             name: "ssi-a",
+            camaraZoneId: "3f8c2e91-6a74-4d5b-9c13-2f6a9e0c7b41",
+            camaraZoneName: "dt-mec-fra-01",
+            provider: "Deutsche Telekom",
+            serviceTypes: ["EdgeApplicationAPI", "FederationGateway"],
             trustlistURI: `${HOLDER_A_ORIGIN}/trust/trust-list.json`,
-            hash: trustHash
+            hash: trustHash,
+            services: [
+                {
+                    "type": "payments",
+                    "url": "/finance/payments",
+                    "protocol": "HTTPS",
+                    "port": 443
+                }
+            ],
+            policies: [
+                {
+                    "description": "Policy for payments service",
+                    "name": "authz/number",
+                    "service": "payments",
+                    "constraints": {
+                        "number": {
+                            "type": "integer",
+                            "maximum": 50
+                        }
+                    }
+                }
+            ],
+            location: {
+                "latitude": 50.11,
+                "longitude": 8.68
+            }
         }
     };
 
@@ -79,11 +104,12 @@ async function main() {
         expansionMap: false
     });
 
-    fs.mkdirSync("./out/vc", { recursive: true });
+    fs.mkdirSync("./out-a/vc", {recursive: true});
     fs.writeFileSync(`${VC_DIR}/vc-self.json`, JSON.stringify(signedVC1, null, 2));
     console.log("✅ VC generated and signed");
 }
-    /* ========= 6. VC2 (intentionally invalid signature) ========= */
+
+/* ========= 6. VC2 (intentionally invalid signature) ========= */
 
 //     // random key NOT in issuer DID doc, but we force proof.verificationMethod = issuer#key-1
 //     const randomKey = await Ed25519VerificationKey2020.generate({
